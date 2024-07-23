@@ -1,0 +1,16 @@
+#popUp {
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+#popUp button {
+    padding: 10px 20px;
+    background-color: #bf7ab7;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}

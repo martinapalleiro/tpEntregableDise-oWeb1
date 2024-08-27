@@ -17,8 +17,6 @@
             getObjects()
         }
 
-        //PROMESAS//
-
         function loadObjects() {
             return new Promise(function (resolve, reject) {
                 var request = new XMLHttpRequest()
@@ -110,7 +108,6 @@
             })
         }
 
-        //FUNCIONES QUE CONSUMEN LAS PROMESAS//
 
         function getObjects() {
             loadObjects().then(response => {
@@ -131,7 +128,6 @@
                 document.getElementById('color').value.trim() !== '' &&
                 document.getElementById('price').value.trim() !== '') {
                     var price = document.getElementById('price').value.trim();
-                    // Validar que el price sea un número
                     if (isNaN(price)) {
                         alert('Por favor, ingrese un número válido en el campo Price.');
                         return;  
@@ -166,10 +162,9 @@
                 document.getElementsByName('color2')[0].value.trim() !== '' &&
                 document.getElementsByName('price2')[0].value.trim() !== '') {
                     var price2 = document.getElementsByName('price2')[0].value.trim();
-                     // Validar que el price2 sea un número
                     if (isNaN(price2)) {
                         alert('Por favor, ingrese un número válido en el campo Price.');
-                        return;  // Evitar continuar si el price2 no es un número
+                        return;  
                     }
                 modifyObject().then(() => {
                     var rows = document.querySelectorAll('tr')
@@ -199,7 +194,7 @@
             }
         }
 
-        //FUNCIONES DE AGREGADO//
+        
 
         function insertTr(object, canChange) {
             var tbody = document.querySelector('tbody')
@@ -252,13 +247,14 @@
 </head>
 
 <body>
-    <table class="table table-striped-columns">
+    <h1>Trabajo practico Diseño Web</h1>
+    <table class="table table-dark table-hover">
         <thead>
             <tr>
-                <th style='text-align: left'>ID</th>
-                <th style='text-align: left'>NAME</th>
-                <th style='text-align: left'>COLOR</th>
-                <th style='text-align: left'>PRICE</th>
+                <th >ID</th>
+                <th >NAME</th>
+                <th >COLOR</th>
+                <th>PRICE</th>
                 <th colspan='2'></th>
             </tr>
         </thead>
@@ -275,8 +271,8 @@
         </tfoot>
     </table>
 
-    <div id='popUp' style="overflow-x: hidden">
-        <table  class="table table-striped table-hover">
+    <div id='popUp'>
+        <table  >
             <tr>
                 <td><label for='id2' style='font-weight: bold'>ID</label></td>
                 <td><input name='id2' style='text-align: right' readonly /></td>
@@ -299,5 +295,4 @@
         </table>
     </div>
 </body>
-
 </html>

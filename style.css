@@ -1,3 +1,6 @@
+h1 {
+    text-align: center;
+}
 #popUp {
     display: none;
     background-color: #fff;
@@ -13,4 +16,7 @@
     color: white;
     cursor: pointer;
     border-radius: 4px;
+}
+h8{
+    text-align: right;
 }
